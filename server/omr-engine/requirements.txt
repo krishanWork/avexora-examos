@@ -1,0 +1,14 @@
+# ExamOS OMR / Computer Vision Engine Dependencies
+# Compatible with Python >= 3.9
+
+# OpenCV Computer Vision library (headless version without GUI/X11 dependencies for servers & containers)
+opencv-python-headless>=4.8.0.76
+
+# Fundamental scientific computing and array operations
+numpy>=1.24.0,<3.0.0
+
+# Multi-page PDF to image rendering (requires system poppler-utils)
+pdf2image>=1.16.3
+
+# Image processing library for Pillow/PIL image formats
+Pillow>=10.0.0

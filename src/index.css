@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 12% 97%;
+    --foreground: 24 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 12%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 39 13% 94%;
+    --secondary-foreground: 24 10% 12%;
+    --muted: 39 13% 94%;
+    --muted-foreground: 25 5% 45%;
+    --accent: 243 100% 97%;
+    --accent-foreground: 243 65% 36%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 158 64% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 30 6% 90%;
+    --input: 30 6% 88%;
+    --ring: 243 75% 59%;
+    --chart-1: 243 84% 67%;
+    --chart-2: 173 80% 32%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 199 89% 48%;
+    --chart-5: 348 89% 56%;
+    --radius: 0.5rem;
+    --font-heading: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-display: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 24 5% 30%;
+    --sidebar-primary: 243 75% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 12% 96%;
+    --sidebar-accent-foreground: 24 10% 12%;
+    --sidebar-border: 30 6% 90%;
+    --sidebar-ring: 243 75% 59%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    overscroll-behavior: none;
+  }
+
+  /* Native app safe areas (notch / status bar / gesture bar) */
+  #root {
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+  }
+
+  /* Prevent accidental text selection on interactive elements (mobile) */
+  button, a, [role="button"], svg, img {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Rich-text email composer (Quill) sizing */
+@layer components {
+  .email-rich-editor .ql-container {
+    min-height: 170px;
+    font-size: 0.875rem;
+    font-family: var(--font-body);
+  }
+  .email-rich-editor .ql-editor {
+    min-height: 170px;
+  }
+  .email-rich-editor .ql-toolbar.ql-snow {
+    border-color: hsl(var(--border));
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .email-rich-editor .ql-container.ql-snow {
+    border-color: hsl(var(--border));
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+
+  /* Rendered email body in the history view */
+  .rich-content {
+    line-height: 1.55;
+    word-break: break-word;
+  }
+  .rich-content p {
+    margin-block: 0.375em;
+  }
+  .rich-content h1,
+  .rich-content h2,
+  .rich-content h3,
+  .rich-content h4 {
+    font-weight: 600;
+    margin-block: 0.5em;
+  }
+  .rich-content ul,
+  .rich-content ol {
+    list-style: revert;
+    padding-left: 1.25rem;
+    margin-block: 0.375em;
+  }
+  .rich-content a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+  }
+  .rich-content blockquote {
+    border-left: 3px solid hsl(var(--border));
+    padding-left: 0.75rem;
+    margin-block: 0.5em;
+  }
+  .rich-content img {
+    max-width: 100%;
+    border-radius: var(--radius);
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "template_id": "a4_100q_4opt_v1",
+  "description": "ExamOS standard A4 single-page OMR sheet for up to 100 questions with 4 options (A-D)",
+  "paper_format": "A4",
+  "canvas": {
+    "width": 2100,
+    "height": 2970,
+    "scale_px_per_mm": 10.0
+  },
+  "alignment_markers": {
+    "shape": "square",
+    "size_mm": 5.0,
+    "centers_mm": {
+      "top_left": [
+        10.5,
+        10.5
+      ],
+      "top_right": [
+        199.5,
+        10.5
+      ],
+      "bottom_left": [
+        10.5,
+        286.5
+      ],
+      "bottom_right": [
+        199.5,
+        286.5
+      ]
+    },
+    "expected_bounding_box_px": {
+      "top_left": [
+        80,
+        80,
+        50,
+        50
+      ],
+      "top_right": [
+        1970,
+        80,
+        50,
+        50
+      ],
+      "bottom_left": [
+        80,
+        2840,
+        50,
+        50
+      ],
+      "bottom_right": [
+        1970,
+        2840,
+        50,
+        50
+      ]
+    }
+  },
+  "grid": {
+    "num_questions": 100,
+    "options_per_question": 4,
+    "option_labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "num_cols": 4,
+    "rows_per_col": 25,
+    "col_x_start_mm": 18.0,
+    "col_width_mm": 43.5,
+    "grid_top_mm": 106.0,
+    "header_height_mm": 7.0,
+    "header_offset_mm": 2.0,
+    "row_height_mm": 6.4,
+    "bubble_offset_x_mm": 11.0,
+    "bubble_gap_mm": 7.2,
+    "bubble_radius_mm": 2.1,
+    "roi": {
+      "inner_radius_fraction": 0.4,
+      "outer_radius_fraction": 0.88
+    }
+  },
+  "page_layout": {
+    "per_page_capacity": 100,
+    "first_page": {
+      "grid_top_mm": 106.0,
+      "rows_per_col": 25
+    },
+    "continuation_page": {
+      "grid_top_mm": 26.0,
+      "rows_per_col": 37
+    }
+  },
+  "identity_grid": {
+    "type": "admission_number",
+    "encoding": "numeric_suffix",
+    "num_digits": 6,
+    "digits": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "x_start_mm": 139.0,
+    "y_start_mm": 66.5,
+    "col_gap_mm": 8.0,
+    "row_gap_mm": 3.2,
+    "bubble_radius_mm": 1.3,
+    "roi": {
+      "inner_radius_fraction": 0.5,
+      "outer_radius_fraction": 0.88
+    }
+  },
+  "thresholds": {
+    "min_fill_ratio": 0.35,
+    "ambiguity_delta": 0.08,
+    "blank_max_fill": 0.25
+  }
+}

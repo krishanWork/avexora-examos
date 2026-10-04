@@ -1,0 +1,62 @@
+{
+  "engine_version": "1.2.0",
+  "generator": "generate_sample_omr.py",
+  "evaluator": "evaluator.py",
+  "cases": [
+    {
+      "name": "perfect",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_50q_4opt_v1.json",
+      "admission": "004521"
+    },
+    {
+      "name": "rotated",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_50q_4opt_v1.json",
+      "admission": "004521",
+      "rotation": -1.5
+    },
+    {
+      "name": "perspective",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_50q_4opt_v1.json",
+      "admission": "004521",
+      "perspective": true
+    },
+    {
+      "name": "blur_brightness",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_50q_4opt_v1.json",
+      "admission": "004521",
+      "blur": 3,
+      "brightness": 1.05
+    },
+    {
+      "name": "blank_only",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_20q_4opt_v1.json",
+      "questions": 20
+    },
+    {
+      "name": "multi_mark",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_20q_4opt_v1.json",
+      "questions": 20
+    },
+    {
+      "name": "mark_styles",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_20q_4opt_v1.json",
+      "questions": 20
+    },
+    {
+      "name": "close_margin",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_20q_4opt_v1.json",
+      "questions": 20
+    },
+    {
+      "name": "erasure",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_20q_4opt_v1.json",
+      "questions": 20
+    },
+    {
+      "name": "identity",
+      "template": "/Users/krishanlakhotia/Desktop/Projects/avexora-examos/server/omr-engine/templates/a4_20q_4opt_v1.json",
+      "admission": "004521",
+      "questions": 30
+    }
+  ]
+}

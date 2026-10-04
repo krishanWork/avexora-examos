@@ -1,0 +1,703 @@
+{
+  "status": "review_required",
+  "engine": "opencv",
+  "engine_version": "1.2.0",
+  "template_id": "a4_20q_4opt_v1",
+  "total_questions": 20,
+  "options_per_question": 4,
+  "answers": {
+    "1": "A",
+    "2": "C"
+  },
+  "extracted_answers": {
+    "1": "A",
+    "2": "C"
+  },
+  "question_results": {
+    "1": {
+      "answer": "A",
+      "candidate_answer": "A",
+      "confidence": 0.956,
+      "status": "detected",
+      "state": "confident",
+      "fill_ratio": 1.0,
+      "second_fill_ratio": 0.0,
+      "margin": 1.0,
+      "adaptive_fill": 0.392,
+      "mean_intensity": 25.0
+    },
+    "2": {
+      "answer": "C",
+      "candidate_answer": "C",
+      "confidence": 0.956,
+      "status": "detected",
+      "state": "confident",
+      "fill_ratio": 1.0,
+      "second_fill_ratio": 0.0,
+      "margin": 1.0,
+      "adaptive_fill": 0.392,
+      "mean_intensity": 25.0
+    },
+    "3": {
+      "answer": null,
+      "candidate_answer": "A",
+      "confidence": 0.25,
+      "status": "multiple_mark",
+      "state": "multiple",
+      "fill_ratio": 1.0,
+      "second_fill_ratio": 1.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.392,
+      "mean_intensity": 25.0
+    },
+    "4": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "5": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "6": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "7": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "8": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "9": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "10": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "11": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "12": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "13": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "14": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "15": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "16": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "17": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "18": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "19": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    },
+    "20": {
+      "answer": null,
+      "candidate_answer": null,
+      "confidence": 0.95,
+      "status": "blank",
+      "state": "blank",
+      "fill_ratio": 0.0,
+      "second_fill_ratio": 0.0,
+      "margin": 0.0,
+      "adaptive_fill": 0.001,
+      "mean_intensity": 254.3
+    }
+  },
+  "flagged_questions": [
+    3
+  ],
+  "flagged_count": 1,
+  "admission_number_detection": {
+    "raw": "001002",
+    "canonical": "001002",
+    "status": "detected",
+    "column_details": [
+      {
+        "column": 0,
+        "detected_digit": "0",
+        "state": "confident",
+        "confidence": 0.956,
+        "fill_ratio": 1.0,
+        "second_fill_ratio": 0.0,
+        "all_fills": [
+          {
+            "digit": "0",
+            "fill_ratio": 1.0,
+            "adaptive_fill": 0.943,
+            "intensity": 24.9
+          },
+          {
+            "digit": "1",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "2",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "3",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "4",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "5",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "6",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "7",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.057,
+            "intensity": 252.8
+          },
+          {
+            "digit": "8",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "9",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.061,
+            "intensity": 252.8
+          }
+        ]
+      },
+      {
+        "column": 1,
+        "detected_digit": "0",
+        "state": "confident",
+        "confidence": 0.956,
+        "fill_ratio": 1.0,
+        "second_fill_ratio": 0.0,
+        "all_fills": [
+          {
+            "digit": "0",
+            "fill_ratio": 1.0,
+            "adaptive_fill": 0.943,
+            "intensity": 24.9
+          },
+          {
+            "digit": "1",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "2",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "3",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "4",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "5",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "6",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "7",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.057,
+            "intensity": 252.8
+          },
+          {
+            "digit": "8",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "9",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.061,
+            "intensity": 252.8
+          }
+        ]
+      },
+      {
+        "column": 2,
+        "detected_digit": "1",
+        "state": "confident",
+        "confidence": 0.956,
+        "fill_ratio": 1.0,
+        "second_fill_ratio": 0.0,
+        "all_fills": [
+          {
+            "digit": "0",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.045,
+            "intensity": 252.8
+          },
+          {
+            "digit": "1",
+            "fill_ratio": 1.0,
+            "adaptive_fill": 0.943,
+            "intensity": 24.9
+          },
+          {
+            "digit": "2",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "3",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "4",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "5",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "6",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "7",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.057,
+            "intensity": 252.8
+          },
+          {
+            "digit": "8",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "9",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.061,
+            "intensity": 252.8
+          }
+        ]
+      },
+      {
+        "column": 3,
+        "detected_digit": "0",
+        "state": "confident",
+        "confidence": 0.956,
+        "fill_ratio": 1.0,
+        "second_fill_ratio": 0.0,
+        "all_fills": [
+          {
+            "digit": "0",
+            "fill_ratio": 1.0,
+            "adaptive_fill": 0.943,
+            "intensity": 24.9
+          },
+          {
+            "digit": "1",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "2",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "3",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "4",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "5",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "6",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "7",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.057,
+            "intensity": 252.8
+          },
+          {
+            "digit": "8",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "9",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.061,
+            "intensity": 252.8
+          }
+        ]
+      },
+      {
+        "column": 4,
+        "detected_digit": "0",
+        "state": "confident",
+        "confidence": 0.956,
+        "fill_ratio": 1.0,
+        "second_fill_ratio": 0.0,
+        "all_fills": [
+          {
+            "digit": "0",
+            "fill_ratio": 1.0,
+            "adaptive_fill": 0.943,
+            "intensity": 24.9
+          },
+          {
+            "digit": "1",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "2",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "3",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "4",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "5",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "6",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "7",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.057,
+            "intensity": 252.8
+          },
+          {
+            "digit": "8",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "9",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.061,
+            "intensity": 252.8
+          }
+        ]
+      },
+      {
+        "column": 5,
+        "detected_digit": "2",
+        "state": "confident",
+        "confidence": 0.956,
+        "fill_ratio": 1.0,
+        "second_fill_ratio": 0.0,
+        "all_fills": [
+          {
+            "digit": "0",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "1",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.045,
+            "intensity": 252.8
+          },
+          {
+            "digit": "2",
+            "fill_ratio": 1.0,
+            "adaptive_fill": 0.943,
+            "intensity": 24.9
+          },
+          {
+            "digit": "3",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "4",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "5",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "6",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "7",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.057,
+            "intensity": 252.8
+          },
+          {
+            "digit": "8",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.053,
+            "intensity": 252.8
+          },
+          {
+            "digit": "9",
+            "fill_ratio": 0.0,
+            "adaptive_fill": 0.061,
+            "intensity": 252.8
+          }
+        ]
+      }
+    ]
+  },
+  "annotated_image": null,
+  "execution_metrics": {
+    "image_resolution": [
+      2100,
+      2970
+    ],
+    "markers_found": 4,
+    "pages_processed": 1,
+    "alignment_time_ms": 20.85,
+    "processing_time_ms": 157.63,
+    "total_time_ms": 229.85,
+    "avg_ms_per_question": 7.881,
+    "image_quality": 0.128
+  }
+}

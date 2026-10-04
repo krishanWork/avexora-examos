@@ -1,0 +1,9 @@
+{
+  "short_name": "ExamOS",
+  "name": "Avexora ExamOS — OMR Exam Management",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0f172a",
+  "background_color": "#ffffff"
+}

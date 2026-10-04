@@ -1,0 +1,7 @@
+# Python files (golden-test generators, validators — not used at runtime)
+*.py
+server/omr-engine/golden
+server/omr-engine/requirements.txt
+requirements.txt
+.agents
+.tmp
