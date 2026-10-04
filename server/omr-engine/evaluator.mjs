@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
 import { performance } from "node:perf_hooks";
 import { getCV } from "./opencv-loader.mjs";
 import { writePng } from "./png-writer.mjs";
@@ -141,14 +140,15 @@ const loadPages = async (cv, imagePath) => {
   if (imagePath.toLowerCase().endsWith(".pdf")) {
     try {
       const canvasMod = await setupPdfGlobals();
+      // pdf.js loads its worker through a runtime `import(this.workerSrc)`, which node-file-trace
+      // cannot resolve, so pdf.worker.mjs never reaches the serverless function bundle. Importing
+      // it here with a literal specifier makes it traceable, and publishing globalThis.pdfjsWorker
+      // makes pdf.js short-circuit its own dynamic import (PDFWorker._setupFakeWorkerGlobal).
+      const { WorkerMessageHandler } = await import("pdfjs-dist/legacy/build/pdf.worker.mjs");
+      globalThis.pdfjsWorker = { WorkerMessageHandler };
       const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
-      const standardFontsDir = path.resolve(
-        path.dirname(import.meta.url),
-        "..", "..", "node_modules", "pdfjs-dist", "legacy", "standard_fonts"
-      );
       const pdf = await pdfjs.getDocument({
         data: new Uint8Array(fs.readFileSync(imagePath)),
-        standardFontDataUrl: pathToFileURL(`${standardFontsDir}${path.sep}`).href,
       }).promise;
       try {
         const { createCanvas } = canvasMod;

@@ -144,8 +144,13 @@ flowchart TB
 *(Current)* `vercel.json` also declares:
 
 - `buildCommand: npm run build`, `outputDirectory: dist` (the Vite build).
-- `includeFiles: server/omr-engine/**/*.mjs,server/omr-engine/templates/**/*.json` so the CV engine and its templates ship with the function.
-- `crons: [{ path: "/api/cron/domain-monitor", schedule: "0 * * * *" }]` — hourly.
+- `includeFiles: ["server/omr-engine/**/*.mjs", "server/omr-engine/templates/**/*.json", "node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"]` so the CV engine, its templates, and the pdf.js worker ship with the function. This **must stay an array**: Vercel expands each array entry as its own glob, so a single comma-joined string is one pattern containing a literal comma and silently matches nothing.
+- `excludeFiles: "node_modules/pdfjs-dist/legacy/build/*.map"` — keeps ~7.8 MB of pdf.js source maps out of the bundle.
+
+*(Current)* **`pdfjs-dist` tracing constraint.** pdf.js loads its worker at runtime via `await import(this.workerSrc)` (with `/*webpackIgnore: true*/` and `/*@vite-ignore*/`), and defaults `workerSrc` to the relative string `"./pdf.worker.mjs"`. Because the specifier is a runtime value, Vercel's node-file-trace cannot follow it, so `pdf.worker.mjs` is **not** bundled and every PDF OMR conversion fails on Vercel with `Setting up fake worker failed: "Cannot find module '.../pdf.worker.mjs'"`. `evaluator.mjs` therefore imports the worker itself with a literal specifier and publishes `globalThis.pdfjsWorker = { WorkerMessageHandler }` before calling `getDocument`; pdf.js checks that global in `PDFWorker._setupFakeWorkerGlobal` and skips its own dynamic import entirely. The explicit `includeFiles` entry is defence in depth. **A `pdfjs-dist` major upgrade may invalidate this and must be re-tested against a real PDF upload.**
+
+*(Current)* `standardFontDataUrl` is deliberately **not** set on `getDocument`. pdf.js fetches standard fonts through the global `fetch`, which Node does not implement for `file:` URLs, so any local path passed here fails with `Unable to load font data` and silently falls back. pdf.js v5 also moved the assets from `pdfjs-dist/legacy/standard_fonts` to `pdfjs-dist/standard_fonts`. OMR sheets embed their fonts, so the fallback is lossless for this pipeline.
+- `crons`: `/api/cron/domain-monitor` on `0 0 * * *` (daily, 00:00 UTC) and `/api/cron/affiliate-renewal-reminders` on `0 6 * * *` (daily, 06:00 UTC).
 - `rewrites`: `/api/(.*)` → `/api`, and `/(.*)` → `/index.html` (SPA history fallback).
 - Security headers on `/`, `/index.html`, and `/assets/(.*)`.
 
@@ -2124,7 +2129,7 @@ These cannot be answered from the repository. Each is stated with why it matters
 | File | What it establishes |
 |---|---|
 | `package.json` | Scripts (`build`, `lint`, `typecheck`, `test`, `test:rbac`), Node `>=20`, ESM, full dependency inventory including `@aws-sdk/client-s3`, `mongodb`, `jsonwebtoken`, `bcryptjs`, `multer`, `@techstark/opencv-js`, `firebase`, `@stripe/*` |
-| `vercel.json` | Build command, output dir, function `maxDuration: 300` / `memory: 1024`, OMR `includeFiles`, hourly cron, SPA and API rewrites, security headers, CSP |
+| `vercel.json` | Build command, output dir, function `maxDuration: 300` / `memory: 1024`, OMR `includeFiles` (CV engine, templates, `pdf.worker.mjs`), `excludeFiles` for pdf.js sourcemaps, daily cron, SPA and API rewrites, security headers, CSP |
 | `.vercelignore` | Python and golden-set files excluded from the deployment |
 | `api/index.js` | Serverless entry: imports and re-exports the Express app |
 | `server/index.js` | `allowed` / `publicRead` / `globalOnly`; JWT helpers; session hydration; the two gates; `SECURITY_CSP`; CORS allowlist; `route()`; `present`; `userPrivilegeWriteRefused`; `assertFlatUpdateBody`; `query`; `logServerAudit`; `CLIENT_AUDIT_EVENTS`; `SERVER_AUDIT_EVENTS`; `assignUserRole`; `FROZEN_EXAM_STATUSES`; `TEACHER_VISIBLE_RESULT_STATUSES`; `readScope`; `assertTenantOwnership`; `writeAllowed`; `assertRelationshipWrite`; `isExamWorkflow`; the entire route table; `stageOmrFile`; `runOmrEvaluator`; `processOMRSheet`; `evaluateExamination`; startup and `app.listen` |
